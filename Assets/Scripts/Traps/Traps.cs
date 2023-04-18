@@ -9,21 +9,15 @@ using TMPro;
 
 public class Traps : MonoBehaviour
 {
-    public GameObject checkpoint;
-
-    private Vector3 _checkpoint;
-
     private int deathCounter = 0;
 
     [SerializeField] private TextMeshProUGUI deathCounterHud;
-
-    public GroundCheck ground;
+    
+    public CheckpointController checkpointController;
     
     // Start is called before the first frame update
     void Start()
     {
-
-        _checkpoint = checkpoint.transform.position;
     }
 
     // Update is called once per frame
@@ -36,9 +30,10 @@ public class Traps : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            transform.position = _checkpoint;
+            
             deathCounter++;
             deathCounterHud.text = deathCounter.ToString();
+            checkpointController.Respawn();
 
         }
     }
