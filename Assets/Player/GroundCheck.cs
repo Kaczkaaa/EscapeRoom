@@ -14,12 +14,14 @@ public class GroundCheck : MonoBehaviour
         playerController.SetGrounded(true); //if not
     } //when we hit the ground, grounded = true
 
-    private void OnTriggerExit(Collider other)
+   /* private void OnTriggerExit(Collider other)
     {
         if (other.gameObject == playerController.gameObject) 
 
         playerController.SetGrounded(false); 
-    } //when we leave the ground, grounded = false
+    } //when we leave the ground, grounded = false*/
+   
+    
 
     private void OnTriggerStay(Collider other)
     {
@@ -28,5 +30,4 @@ public class GroundCheck : MonoBehaviour
 
         playerController.SetGrounded(true); 
     } //while on the ground, grounded = true
-
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,7 +25,10 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        Jump();
+        if (context.started)
+        {
+            Jump();
+        }
     }
 
     private void FixedUpdate()
@@ -38,11 +42,13 @@ public class PlayerController : MonoBehaviour
 
         if (grounded)
         {
+            Debug.Log("JD");
             jumpForces = Vector3.up * jumpForce;
+            grounded = false;
         }
 
         rb.AddForce(jumpForces, ForceMode.VelocityChange);
-    } //idk why do i jump on left click tho XD
+    }
 
     void Move()
     {
@@ -60,7 +66,7 @@ public class PlayerController : MonoBehaviour
         velocityChange = new Vector3(velocityChange.x, 0, velocityChange.z); //falling
 
         //Limit Force
-        rb.AddForce(velocityChange, ForceMode.VelocityChange);
+        rb.AddForce(velocityChange * Time.fixedDeltaTime, ForceMode.VelocityChange);
 
     }
 
@@ -81,7 +87,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() //late Update? bu³a!! doesn't work???._.
+    void Update() //late Update? buï¿½a!! doesn't work???._.
     {
        Look();
     }
@@ -89,5 +95,9 @@ public class PlayerController : MonoBehaviour
     public void SetGrounded(bool state)
     {
         grounded = state;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        grounded = true;
     }
 }
