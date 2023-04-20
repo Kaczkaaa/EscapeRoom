@@ -8,6 +8,17 @@ public class CheckpointController : MonoBehaviour
    public Transform actuallCheckpoint;
    [SerializeField] GameObject _player;
 
+   private void Awake()
+   {
+       var table = GetComponentsInChildren<Checkpoint>();
+
+       for (int i = 0; i < table.Length; i++)
+       {
+           table[i].checkpointController = this;
+       }
+   }
+   
+
 
    public void Respawn()
    {
@@ -62,8 +73,7 @@ public class CheckpointController : MonoBehaviour
         
     }
 
-  
-    DLA KRZYSIA 
+    
    void OnTriggerEnter(Collider other)
     {
         checkpointNumber++;
@@ -93,7 +103,7 @@ public class CheckpointController : MonoBehaviour
     }
     public void Respawn()
     {
-        _playerPosition = checkpointPosition;
+        playerPosition.transform.position = checkpointPosition;
         Debug.Log(checkpointPosition);
         Debug.Log(_playerPosition);
     }*/

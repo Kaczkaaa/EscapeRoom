@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-   [SerializeField] CheckpointController checkpointController;
-    [SerializeField] LayerMask playerLayer;
+    public CheckpointController checkpointController;
     [SerializeField] Collider collider;
 
     void Start()
@@ -15,10 +14,8 @@ public class Checkpoint : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("1");
         if (other.gameObject.layer == 3)
-        { 
-            Debug.Log("2");
+        {
             checkpointController.actuallCheckpoint = gameObject.transform;
             if (collider != null)
             {

@@ -7,14 +7,14 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 
-public class Traps : MonoBehaviour
+public class PlayerRespawn : MonoBehaviour,IDamagable
 {
-    private int deathCounter = 0;
+    private int deathCounter;
 
     [SerializeField] private TextMeshProUGUI deathCounterHud;
     
     public CheckpointController checkpointController;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,17 +25,26 @@ public class Traps : MonoBehaviour
     {
         
     }
-
-    private void OnCollisionEnter(Collision other)
+   /* private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
         {
-            
             deathCounter++;
             deathCounterHud.text = deathCounter.ToString();
-            checkpointController.Respawn();
+            checkpointController.Respawn(); 
 
         }
-    }
-    
+    }*/
+
+   private void OnTriggerEnter(Collider other)
+   {
+       
+   }
+   // 
+   public void OnKill()
+   {
+       deathCounter++;
+       deathCounterHud.text = deathCounter.ToString();
+       checkpointController.Respawn();
+   }
 }
