@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8844600187593023516}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CameraHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8844600187787207836}
   - component: {fileID: 8844600187787207837}
   - component: {fileID: 8844600187787207838}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -165,9 +165,10 @@ GameObject:
   - component: {fileID: 8844600189419247639}
   - component: {fileID: 8844600189419247722}
   - component: {fileID: 8844600189419247725}
-  m_Layer: 0
+  - component: {fileID: 28335834}
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,10 +283,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8844600189419247639}
   CameraHolder: {fileID: 8844600187787207834}
-  speed: 4
+  speed: 13
   sensitivity: 0.1
   maxForce: 1
-  jumpForce: 3
+  jumpForce: 5
   grounded: 0
 --- !u!114 &8844600189419247725
 MonoBehaviour:
@@ -346,19 +347,7 @@ MonoBehaviour:
     m_ActionId: 2eae92b6-7184-48aa-b1b3-61d5e5fac453
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8844600189419247722}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: ac0aaaad-a750-41d7-b9a6-f08c4045ab40
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -402,7 +391,19 @@ MonoBehaviour:
     m_ActionId: d295bf1c-5533-481b-b47c-e4fda43a3bbe
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8844600189419247722}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 868479d1-0ec2-40a1-a86e-457bf77ca1cd
     m_ActionName: Player/Jump[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
@@ -410,3 +411,17 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &28335834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844600189419247636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab7ad2bac2fd8444af5157e64d10d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathCounterHud: {fileID: 0}
+  checkpointController: {fileID: 0}
