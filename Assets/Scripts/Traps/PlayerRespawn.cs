@@ -15,9 +15,13 @@ public class PlayerRespawn : MonoBehaviour,IDamagable
     
     public CheckpointController checkpointController;
 
-    // Start is called before the first frame update
+    public GameEvent SOdeathcounter;
+    [SerializeField] private TextMeshProUGUI deathCounterALLHud;
+
+    // Start is called before the first frame update    
     void Start()
     {
+        deathCounterALLHud.text = SOdeathcounter.value.ToString();
     }
 
     // Update is called once per frame
@@ -44,7 +48,9 @@ public class PlayerRespawn : MonoBehaviour,IDamagable
    public void OnKill()
    {
        deathCounter++;
+       SOdeathcounter.value ++;
        deathCounterHud.text = deathCounter.ToString();
+       deathCounterALLHud.text = SOdeathcounter.value.ToString();
        checkpointController.Respawn();
    }
 }

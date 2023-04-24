@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
 
         if (grounded)
         {
-            Debug.Log("JD");
             jumpForces = Vector3.up * jumpForce;
             grounded = false;
         }
