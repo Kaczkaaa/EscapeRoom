@@ -47,6 +47,15 @@
                     "id": "1f1eb2fe-ce7a-40fd-9112-0dd2347ef4be",
                     "expectedControlType": "Button",
                     "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PutOffItems",
+                    "type": "Button",
+                    "id": "851eaa39-de11-4937-a894-a05847f39826",
+                    "expectedControlType": "Button",
+                    "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 }
@@ -287,10 +296,21 @@
                     "name": "",
                     "id": "5e88b3d8-9be6-4cd9-ab9e-3fcc4dd33ca5",
                     "path": "<Keyboard>/e",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "PickUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c81e4c3a-6e99-4b86-a061-74a99eb17be0",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PutOffItems",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

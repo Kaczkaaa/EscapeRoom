@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028fc0ddcca3eea41ad312c72ef582c1, type: 3}
   m_Name: DeathCounter
   m_EditorClassIdentifier: 
-  value: 0
+  value: 20

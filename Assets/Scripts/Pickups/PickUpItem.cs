@@ -4,40 +4,60 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class PickUpItem : MonoBehaviour
 {
-    bool isPickedUp;
-    int itemsPickedUp;
+    public static int itemsPickedUp;
+    public int itemsPickUpsInt;
     public GameObject pickUpText;
+    public GameObject pickUpItem;
     public TextMeshProUGUI itemsPickedUpHUD;
+
+    private bool isInTrigger;
     // Start is called before the first frame update
     void Start()
     {
         pickUpText.SetActive(false);
-        isPickedUp = false;
+        isInTrigger = false;
     }
+
+     public void OnPickUp(InputAction.CallbackContext context)
+    {
+        if (isInTrigger == true)
+        {
+            PickUp();
+        }
+    }
+    
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "PickUp")
         {
-           // if (Input.GetKey(KeyCode.E))
-                {
-                pickUpText.SetActive(true);
-                isPickedUp = true;
-                itemsPickedUpHUD.text = itemsPickedUp.ToString();
-                
-                }
+            isInTrigger = true;
+            pickUpText.SetActive(true);
         }
-
     }
+
+    
 
     void OnTriggerExit(Collider other)
     {
+        isInTrigger = false;
         pickUpText.SetActive(false);
-        gameObject.GetComponent<BoxCollider>().enabled = false;
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
+    }
+
+    void PickUp()
+    {
+        itemsPickedUp++;
+        pickUpItem.GetComponent<MeshRenderer>().enabled = false;
+        pickUpItem.GetComponent<BoxCollider>().enabled = false;
+        pickUpText.SetActive(false);
+        itemsPickUpsInt = itemsPickedUp;
+        itemsPickedUpHUD.text = itemsPickedUp.ToString();
+        Debug.Log(itemsPickUpsInt);
     }
 
 }
