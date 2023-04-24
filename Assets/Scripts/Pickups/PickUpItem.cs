@@ -25,7 +25,7 @@ public class PickUpItem : MonoBehaviour
 
      public void OnPickUp(InputAction.CallbackContext context)
     {
-        if (isInTrigger == true)
+        if (isInTrigger == true && context.started)
         {
             PickUp();
         }
