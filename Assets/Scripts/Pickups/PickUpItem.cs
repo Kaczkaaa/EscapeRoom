@@ -14,6 +14,8 @@ public class PickUpItem : MonoBehaviour
     public GameObject pickUpText;
     public GameObject pickUpItem;
     public TextMeshProUGUI itemsPickedUpHUD;
+    [SerializeField] float maxDistance;
+    bool isInRayCast;
 
     private bool isInTrigger;
     // Start is called before the first frame update
@@ -21,33 +23,51 @@ public class PickUpItem : MonoBehaviour
     {
         pickUpText.SetActive(false);
         isInTrigger = false;
+        isInRayCast = false;
+    }
+    void Update()
+    {
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if(Physics.Raycast(ray, out hit, maxDistance))
+        {
+            var selection = hit.transform;
+            if (selection.tag == "PickUp")
+            {
+                isInRayCast = true;
+            }
+            else
+            {
+                isInRayCast = false;
+            }
+        }
     }
 
-     public void OnPickUp(InputAction.CallbackContext context)
+    public void OnPickUp(InputAction.CallbackContext context)
     {
-        if (isInTrigger == true && context.started)
+        if (isInRayCast == true && context.started)
         {
             PickUp();
         }
     }
     
 
-    void OnTriggerStay(Collider other)
+    /*void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "PickUp")
         {
             isInTrigger = true;
             pickUpText.SetActive(true);
         }
-    }
+    }*/
 
     
 
-    void OnTriggerExit(Collider other)
+    /*void OnTriggerExit(Collider other)
     {
         isInTrigger = false;
         pickUpText.SetActive(false);
-    }
+    }*/
 
     void PickUp()
     {
