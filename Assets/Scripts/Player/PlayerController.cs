@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
             jumpForces = Vector3.up * jumpForce;
             grounded = false;
         }
-
         rb.AddForce(jumpForces, ForceMode.VelocityChange);
     }
 
@@ -66,9 +65,7 @@ public class PlayerController : MonoBehaviour
 
         //Limit Force
         rb.AddForce(velocityChange * Time.fixedDeltaTime, ForceMode.VelocityChange);
-
     }
-
     void Look()
     {
         //Turn
@@ -79,23 +76,19 @@ public class PlayerController : MonoBehaviour
         lookRotation = Mathf.Clamp(lookRotation, -90, 90); //so you can't look up past 90 and -90 degrees
         CameraHolder.transform.eulerAngles = new Vector3(lookRotation, CameraHolder.transform.eulerAngles.y, CameraHolder.transform.eulerAngles.z);
     }
-    // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked; //hide and lock cursor to the center of the screen
     }
-
-    // Update is called once per frame
-    void Update() //late Update? bu�a!! doesn't work???._.
+    void Update() 
     {
        Look();
     }
-
-    public void SetGrounded(bool state)
+    public void SetGrounded(bool state) 
     {
         grounded = state;
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) //ground = box collider 1 (is trigger off) + box collider 2 (is trigger on)
     {
         grounded = true;
     }
