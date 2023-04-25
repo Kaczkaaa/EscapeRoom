@@ -14,61 +14,75 @@ public class PickUpItem : MonoBehaviour
     public GameObject pickUpText;
     public GameObject pickUpItem;
     public TextMeshProUGUI itemsPickedUpHUD;
-    [SerializeField] float maxDistance;
-    bool isInRayCast;
-
-    private bool isInTrigger;
+    [SerializeField] private float maxDistance = 50;
+    private bool isInRayCast;
+     
+    [SerializeField] private Transform camera;
+    private DropZoneInteractionType lastinteracTypeRayCasted;
+    
     // Start is called before the first frame update
     void Start()
     {
         pickUpText.SetActive(false);
-        isInTrigger = false;
         isInRayCast = false;
     }
     void Update()
     {
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        camera = Camera.main.transform;
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, maxDistance))
+        if(Physics.Raycast(camera.position,camera.forward, out hit,maxDistance))
         {
-            var selection = hit.transform;
-            if (selection.tag == "PickUp")
+            Debug.DrawLine(camera.position,camera.forward * maxDistance, Color.yellow);
+            var selection = hit.transform.GetComponent<DropZone>();
+
+            if (selection == null)
+            {
+                isInRayCast = false;
+                pickUpText.SetActive(false);
+                return;
+            }
+            
+            isInRayCast = true;
+            lastinteracTypeRayCasted = selection.dropZoneInteractionType;
+            switch (selection.dropZoneInteractionType)
+            {
+                case DropZoneInteractionType.PutOn:
+                    pickUpText.SetActive(true);
+                    break;
+                case DropZoneInteractionType.PutOf://putoff
+                    break;
+                default:
+                    break;
+            }
+            
+            if (selection.dropZoneInteractionType == DropZoneInteractionType.PutOn)
             {
                 isInRayCast = true;
             }
             else
             {
                 isInRayCast = false;
+                pickUpText.SetActive(false);
             }
         }
     }
 
     public void OnPickUp(InputAction.CallbackContext context)
     {
-        if (isInRayCast == true && context.started)
+        if (isInRayCast  && context.started)
         {
+            switch (lastinteracTypeRayCasted)
+            {
+                case DropZoneInteractionType.PutOn:
+                    PickUp();
+                    break;
+                case DropZoneInteractionType.PutOf:
+                    //PutOff();
+                    break;
+            }
             PickUp();
         }
     }
-    
-
-    /*void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "PickUp")
-        {
-            isInTrigger = true;
-            pickUpText.SetActive(true);
-        }
-    }*/
-
-    
-
-    /*void OnTriggerExit(Collider other)
-    {
-        isInTrigger = false;
-        pickUpText.SetActive(false);
-    }*/
-
     void PickUp()
     {
         itemsPickedUp++;
