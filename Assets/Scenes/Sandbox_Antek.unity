@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathCounterHud: {fileID: 1979981967}
   checkpointController: {fileID: 1041485659}
-  SOdeathcounter: {fileID: 11400000, guid: d94d8b5f4d18034449532b5d942cda02, type: 2}
+  SOdeathcounter: {fileID: 11400000, guid: b5f882b568481db48abe6e7d70ef5fa6, type: 2}
   deathCounterALLHud: {fileID: 1737179528}
 --- !u!114 &28335836 stripped
 MonoBehaviour:
@@ -169,12 +169,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b32d5ea9aabbd4aa86c04e13bc50cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsPickUpsInt: 0
   pickUpText: {fileID: 56094983}
   pickUpItem: {fileID: 281405949}
   itemsPickedUpHUD: {fileID: 1036917953}
   maxDistance: 200
   camera: {fileID: 891458466}
+  putOffText: {fileID: 1985174203}
+  putOffItem: {fileID: 1706105817}
 --- !u!114 &28335850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,12 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49ee58f599d29a4a88262fddc119ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsPickedUp: {fileID: 28335843}
-  putOffText: {fileID: 1985174203}
-  putOffItem: {fileID: 1706105817}
-  itemsPickedUpHUD: {fileID: 1036917953}
-  camera: {fileID: 891458466}
-  maxDistance: 200
 --- !u!1 &56094983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,7 +1798,7 @@ PrefabInstance:
     - target: {fileID: 8844600189419247725, guid: acee656e07b963c4bb04ed115e908752,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8844600189419247725, guid: acee656e07b963c4bb04ed115e908752,
         type: 3}
@@ -2346,6 +2341,7 @@ GameObject:
   - component: {fileID: 1706105821}
   - component: {fileID: 1706105820}
   - component: {fileID: 1706105819}
+  - component: {fileID: 1706105822}
   m_Layer: 0
   m_Name: ItemPuttedOff
   m_TagString: PutOff
@@ -2431,6 +2427,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706105817}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1706105822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706105817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d94e2a6e3d22b47beb58e69a94e12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropZoneInteractionType: 1
 --- !u!1 &1737179526
 GameObject:
   m_ObjectHideFlags: 0

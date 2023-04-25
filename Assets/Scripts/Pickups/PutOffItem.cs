@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 public class PutOffItem : MonoBehaviour
 {
-    public PickUpItem itemsPickedUp;
+   /* public PickUpItem itemsPickedUp;
     private int itemToPutOff;
     public GameObject putOffText;
 
@@ -41,7 +41,7 @@ public class PutOffItem : MonoBehaviour
             {
                 isInRayCast = true;
                 putOffText.SetActive(true);
-                itemToPutOff = itemsPickedUp.itemsPickUpsInt;
+                //itemToPutOff = itemsPickedUp.itemsPickUpsInt;
             }
             else
             {
@@ -67,5 +67,5 @@ public class PutOffItem : MonoBehaviour
         putOffItem.GetComponent<BoxCollider>().enabled = false;
         putOffItem.GetComponent<MeshRenderer>().enabled = true;
         itemsPickedUpHUD.text = itemToPutOff.ToString();
-    }
+    }*/
 }

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 028fc0ddcca3eea41ad312c72ef582c1, type: 3}
-  m_Name: DeathCounter
+  m_Script: {fileID: 11500000, guid: efb2fd9c464019b44a8144cdc8e142cd, type: 3}
+  m_Name: DeathCounter 1
   m_EditorClassIdentifier: 
-  value: 0
+  Value: 0

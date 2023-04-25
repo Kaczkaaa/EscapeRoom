@@ -1,5 +1,5 @@
 ﻿public enum DropZoneInteractionType
 {
     PutOn,
-    PutOf
+    PutOff
 }

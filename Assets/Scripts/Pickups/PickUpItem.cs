@@ -10,7 +10,6 @@ using UnityEngine.InputSystem;
 public class PickUpItem : MonoBehaviour
 {
     public static int itemsPickedUp;
-    public int itemsPickUpsInt;
     public GameObject pickUpText;
     public GameObject pickUpItem;
     public TextMeshProUGUI itemsPickedUpHUD;
@@ -20,25 +19,33 @@ public class PickUpItem : MonoBehaviour
     [SerializeField] private Transform camera;
     private DropZoneInteractionType lastinteracTypeRayCasted;
     
+    
+    public GameObject putOffText;
+    public GameObject putOffItem;
+    
     // Start is called before the first frame update
     void Start()
     {
         pickUpText.SetActive(false);
         isInRayCast = false;
+        putOffText.SetActive(false);
     }
     void Update()
     {
+        itemsPickedUpHUD.text = itemsPickedUp.ToString();
+        
         camera = Camera.main.transform;
         RaycastHit hit;
         if(Physics.Raycast(camera.position,camera.forward, out hit,maxDistance))
         {
-            Debug.DrawLine(camera.position,camera.forward * maxDistance, Color.yellow);
+            //Debug.DrawLine(camera.position,camera.forward * maxDistance, Color.yellow);
             var selection = hit.transform.GetComponent<DropZone>();
 
             if (selection == null)
             {
                 isInRayCast = false;
                 pickUpText.SetActive(false);
+                putOffText.SetActive(false);
                 return;
             }
             
@@ -49,20 +56,11 @@ public class PickUpItem : MonoBehaviour
                 case DropZoneInteractionType.PutOn:
                     pickUpText.SetActive(true);
                     break;
-                case DropZoneInteractionType.PutOf://putoff
+                case DropZoneInteractionType.PutOff:
+                    putOffText.SetActive(true);
                     break;
                 default:
                     break;
-            }
-            
-            if (selection.dropZoneInteractionType == DropZoneInteractionType.PutOn)
-            {
-                isInRayCast = true;
-            }
-            else
-            {
-                isInRayCast = false;
-                pickUpText.SetActive(false);
             }
         }
     }
@@ -76,8 +74,8 @@ public class PickUpItem : MonoBehaviour
                 case DropZoneInteractionType.PutOn:
                     PickUp();
                     break;
-                case DropZoneInteractionType.PutOf:
-                    //PutOff();
+                case DropZoneInteractionType.PutOff:
+                    PutOff();
                     break;
             }
             PickUp();
@@ -89,9 +87,14 @@ public class PickUpItem : MonoBehaviour
         pickUpItem.GetComponent<MeshRenderer>().enabled = false;
         pickUpItem.GetComponent<BoxCollider>().enabled = false;
         pickUpText.SetActive(false);
-        itemsPickUpsInt = itemsPickedUp;
-        itemsPickedUpHUD.text = itemsPickedUp.ToString();
-        Debug.Log(itemsPickUpsInt);
+        Debug.Log(3);
+    }
+    void PutOff()
+    {
+        itemsPickedUp -= 1;
+        putOffText.SetActive(false);
+        putOffItem.GetComponent<BoxCollider>().enabled = false;
+        putOffItem.GetComponent<MeshRenderer>().enabled = true;
     }
 
 }

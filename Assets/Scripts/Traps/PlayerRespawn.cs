@@ -15,7 +15,7 @@ public class PlayerRespawn : MonoBehaviour,IDamagable
     
     public CheckpointController checkpointController;
 
-    public GameEvent SOdeathcounter;
+    public ScriptableObjectINT SOdeathcounter;
     [SerializeField] private TextMeshProUGUI deathCounterALLHud;
 
     // Start is called before the first frame update    
@@ -50,7 +50,7 @@ public class PlayerRespawn : MonoBehaviour,IDamagable
        deathCounter++;
        SOdeathcounter.value ++;
        deathCounterHud.text = deathCounter.ToString();
-       deathCounterALLHud.text = SOdeathcounter.value.ToString();
+      deathCounterALLHud.text = SOdeathcounter.value.ToString();
        checkpointController.Respawn();
    }
 }
