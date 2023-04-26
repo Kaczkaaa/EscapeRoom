@@ -3,24 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac3febb1-74d0-49c6-8eb9-f34a23163a96" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EscapeRoom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EscapeRoom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Controlls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controlls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sandbox_Antek.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sandbox_Antek.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DeathCounter.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DeathCounter.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/DropZoneInteractionType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickups/DropZoneInteractionType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/IInteractablee.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/IInteractablee.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/PickUpItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickups/PickUpItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/PutOffItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickups/PutOffItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/PutOffItemInterface.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/PutOffItemInterface.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrapSpikes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrapSpikes.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Traps/Checkpoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Traps/Checkpoint.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Traps/CheckpointController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Traps/CheckpointController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Traps/PlayerRespawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Traps/PlayerRespawn.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +28,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameEvent/UnityGameEventListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pickups/PickUpItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjectINT.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Traps/ShootingTrap.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -68,9 +50,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\PC\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Antek\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -139,6 +121,7 @@
       <workItem from="1682432185506" duration="8454000" />
       <workItem from="1682445294120" duration="312000" />
       <workItem from="1682453056818" duration="1437000" />
+      <workItem from="1682517892983" duration="1500000" />
     </task>
     <servers />
   </component>

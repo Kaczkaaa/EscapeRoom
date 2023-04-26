@@ -32,8 +32,7 @@ public class PickUpItem : MonoBehaviour
     }
     void Update()
     {
-        itemsPickedUpHUD.text = itemsPickedUp.ToString();
-        
+
         camera = Camera.main.transform;
         RaycastHit hit;
         if(Physics.Raycast(camera.position,camera.forward, out hit,maxDistance))
@@ -78,7 +77,6 @@ public class PickUpItem : MonoBehaviour
                     PutOff();
                     break;
             }
-            PickUp();
         }
     }
     void PickUp()
@@ -87,14 +85,15 @@ public class PickUpItem : MonoBehaviour
         pickUpItem.GetComponent<MeshRenderer>().enabled = false;
         pickUpItem.GetComponent<BoxCollider>().enabled = false;
         pickUpText.SetActive(false);
-        Debug.Log(3);
+        itemsPickedUpHUD.text = itemsPickedUp.ToString();
     }
     void PutOff()
     {
-        itemsPickedUp -= 1;
+        Debug.Log(itemsPickedUp);
+        itemsPickedUp --;
         putOffText.SetActive(false);
         putOffItem.GetComponent<BoxCollider>().enabled = false;
         putOffItem.GetComponent<MeshRenderer>().enabled = true;
+        itemsPickedUpHUD.text = itemsPickedUp.ToString();
     }
-
 }
