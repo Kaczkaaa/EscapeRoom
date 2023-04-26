@@ -176,18 +176,6 @@ MonoBehaviour:
   camera: {fileID: 891458466}
   putOffText: {fileID: 1985174203}
   putOffItem: {fileID: 1706105817}
---- !u!114 &28335850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28335826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e49ee58f599d29a4a88262fddc119ce9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &56094983
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +324,7 @@ GameObject:
   - component: {fileID: 281405953}
   - component: {fileID: 281405951}
   - component: {fileID: 281405956}
+  - component: {fileID: 281405957}
   m_Layer: 0
   m_Name: PickUp
   m_TagString: PickUp
@@ -354,7 +343,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 4}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &281405953
 MeshRenderer:
@@ -434,6 +423,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropZoneInteractionType: 0
+--- !u!114 &281405957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281405949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b53c17da8fbe2844a8cbb6d88193c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &330086179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,12 +1850,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 28335850}
+      objectReference: {fileID: 0}
     - target: {fileID: 8844600189419247725, guid: acee656e07b963c4bb04ed115e908752,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 28335850}
+      objectReference: {fileID: 0}
     - target: {fileID: 8844600189419247725, guid: acee656e07b963c4bb04ed115e908752,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2375,8 +2376,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14, y: 14, z: 14}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4, y: 4, z: 4}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!23 &1706105820
 MeshRenderer:
   m_ObjectHideFlags: 0
