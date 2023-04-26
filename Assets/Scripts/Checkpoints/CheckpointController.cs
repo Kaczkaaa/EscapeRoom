@@ -18,32 +18,11 @@ public class CheckpointController : MonoBehaviour
        }
    }
    
-
-
    public void Respawn()
    {
        _player.transform.position = actuallCheckpoint.position;
    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
 
     
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class UnityGameEventListener : MonoBehaviour,IGameEventListener
+/*public class UnityGameEventListener : MonoBehaviour,IGameEventListener
 {
-    public GameEvent gameEvent;
+   /* public GameEvent gameEvent;
 
     public UnityEvent response;
     // Start is called before the first frame update
@@ -22,5 +22,5 @@ public class UnityGameEventListener : MonoBehaviour,IGameEventListener
     public void OnEventRaise()
     {
         response?.Invoke();
-    }
-}
+    }*/
+

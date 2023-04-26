@@ -7,11 +7,7 @@ public class Checkpoint : MonoBehaviour
 {
     public CheckpointController checkpointController;
     [SerializeField] Collider collider;
-
-    void Start()
-    {
-
-    }
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 3)
