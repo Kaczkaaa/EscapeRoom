@@ -6,7 +6,7 @@ public class PickUpInterface : MonoBehaviour,IPlayerInteraction
 {
     public void OnInteraction()
     {
-        this.GetComponent<MeshRenderer>().enabled = false;
-        this.GetComponent<BoxCollider>().enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 }

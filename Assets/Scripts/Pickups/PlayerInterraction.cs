@@ -53,10 +53,11 @@ public class PlayerInterraction : MonoBehaviour
    public void PickUp()
     {
         itemsPickedUp++;
-        //IPlayerInteraction interactableobject = GetComponent<IPlayerInteraction>();
-        //interactableobject.OnInteraction();
-        pickUpItem.GetComponent<MeshRenderer>().enabled = false;
-        pickUpItem.GetComponent<BoxCollider>().enabled = false;
+        IPlayerInteraction interactableobject = GetComponent<IPlayerInteraction>();
+        if (interactableobject != null)
+        {
+            interactableobject.OnInteraction();
+        }
         pickUpText.SetActive(false);
         itemsPickedUpHUD.text = itemsPickedUp.ToString();
     }
@@ -64,10 +65,11 @@ public class PlayerInterraction : MonoBehaviour
     {
         itemsPickedUp --;
         putOffText.SetActive(false);
-        //IPlayerInteraction interactableobject = GetComponent<IPlayerInteraction>();
-        //interactableobject.OnInteraction();
-        putOffItem.GetComponent<BoxCollider>().enabled = false;
-        putOffItem.GetComponent<MeshRenderer>().enabled = true;
+        IPlayerInteraction interactableobject = GetComponent<IPlayerInteraction>();
+        if (interactableobject != null)
+        {
+            interactableobject.OnInteraction();
+        }
         itemsPickedUpHUD.text = itemsPickedUp.ToString();
     }
     void RayCastCheck()
