@@ -45,31 +45,35 @@ public class PlayerInterraction : MonoBehaviour
                     PickUp();
                     break;
                 case DropZoneInteractionType.PutOff:
-                    PutOff();
+                    if (itemsPickedUp > 0)
+                    {
+                        PutOff();
+                    }
                     break;
             }
         }
     }
-   public void PickUp()
+    void PickUp()
     {
-        itemsPickedUp++;
         IPlayerInteraction interactableobject = GetComponent<IPlayerInteraction>();
         if (interactableobject != null)
         {
             interactableobject.OnInteraction();
         }
+        itemsPickedUp++;
         pickUpText.SetActive(false);
         itemsPickedUpHUD.text = itemsPickedUp.ToString();
+        
     }
-    public void PutOff()
+    void PutOff()
     {
-        itemsPickedUp --;
-        putOffText.SetActive(false);
         IPlayerInteraction interactableobject = GetComponent<IPlayerInteraction>();
         if (interactableobject != null)
         {
             interactableobject.OnInteraction();
         }
+        itemsPickedUp --;
+        putOffText.SetActive(false);
         itemsPickedUpHUD.text = itemsPickedUp.ToString();
     }
     void RayCastCheck()
