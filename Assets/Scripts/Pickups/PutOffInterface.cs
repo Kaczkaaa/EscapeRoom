@@ -6,7 +6,7 @@ public class PutOffInterface : MonoBehaviour,IPlayerInteraction
 {
     public void OnInteraction()
     {
-        GetComponent<BoxCollider>().enabled = false;
-        GetComponent<MeshRenderer>().enabled = true;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
     }
 }
