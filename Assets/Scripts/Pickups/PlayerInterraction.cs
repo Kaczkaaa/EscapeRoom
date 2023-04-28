@@ -11,7 +11,6 @@ public class PlayerInterraction : MonoBehaviour
 {
     public static int itemsPickedUp;
     public GameObject pickUpText;
-    public GameObject pickUpItem;
     public TextMeshProUGUI itemsPickedUpHUD;
     [SerializeField] private float maxDistance = 50;
     private bool isInRayCast;
@@ -21,8 +20,8 @@ public class PlayerInterraction : MonoBehaviour
     
     
     public GameObject putOffText;
-    public GameObject putOffItem;
-    
+
+    private IPlayerInteraction lastRaycastedInteraction;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,37 +38,31 @@ public class PlayerInterraction : MonoBehaviour
     {
         if (isInRayCast  && context.started)
         {
+            lastRaycastedInteraction?.OnInteraction();
             switch (lastinteracTypeRayCasted)
             {
                 case DropZoneInteractionType.PutOn:
                     PickUp();
                     break;
                 case DropZoneInteractionType.PutOff:
-                    PutOff();
+                    if (itemsPickedUp > 0)
+                    {
+                        PutOff();
+                    }
                     break;
             }
         }
     }
-   public void PickUp()
+    void PickUp()
     {
         itemsPickedUp++;
-        IPlayerInteraction interactableobject = GetComponent<IPlayerInteraction>();
-        if (interactableobject != null)
-        {
-            interactableobject.OnInteraction();
-        }
         pickUpText.SetActive(false);
         itemsPickedUpHUD.text = itemsPickedUp.ToString();
     }
-    public void PutOff()
+    void PutOff()
     {
         itemsPickedUp --;
         putOffText.SetActive(false);
-        IPlayerInteraction interactableobject = GetComponent<IPlayerInteraction>();
-        if (interactableobject != null)
-        {
-            interactableobject.OnInteraction();
-        }
         itemsPickedUpHUD.text = itemsPickedUp.ToString();
     }
     void RayCastCheck()
@@ -93,7 +86,7 @@ public class PlayerInterraction : MonoBehaviour
             isInRayCast = true;
             
             lastinteracTypeRayCasted = selection.dropZoneInteractionType;
-            
+            lastRaycastedInteraction = hit.transform.GetComponent<IPlayerInteraction>();
             switch (selection.dropZoneInteractionType)
             {
                 case DropZoneInteractionType.PutOn:
