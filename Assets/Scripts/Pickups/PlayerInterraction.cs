@@ -34,7 +34,6 @@ public class PlayerInterraction : MonoBehaviour
     void Update()
     {
         RayCastCheck();
-        Debug.Log(itemsPlacedAlready);
     }
 
     public void OnPickUp(InputAction.CallbackContext context)
