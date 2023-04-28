@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShootingTrap : MonoBehaviour
 {
-    public Transform player;
     [SerializeField] private float timer = 5;
 
     private float bulletTime;
@@ -14,13 +13,7 @@ public class ShootingTrap : MonoBehaviour
     public Transform bulletSpawnPoint;
 
     public float bulletSpeed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         ShootBullet();

@@ -166,6 +166,9 @@ GameObject:
   - component: {fileID: 8844600189419247722}
   - component: {fileID: 8844600189419247725}
   - component: {fileID: 28335834}
+  - component: {fileID: 735748229195135209}
+  - component: {fileID: 28335843}
+  - component: {fileID: 28335850}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -406,6 +409,42 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 868479d1-0ec2-40a1-a86e-457bf77ca1cd
     m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 28335843}
+        m_TargetAssemblyTypeName: PickUpItem, Assembly-CSharp
+        m_MethodName: OnPickUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 28335850}
+        m_TargetAssemblyTypeName: PutOffItem, Assembly-CSharp
+        m_MethodName: OnPutOffItems
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1f1eb2fe-ce7a-40fd-9112-0dd2347ef4be
+    m_ActionName: Player/PickUp[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 851eaa39-de11-4937-a894-a05847f39826
+    m_ActionName: Player/PutOffItems[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e0211ce9-1489-4818-88a9-93f85151b71a
+    m_ActionName: Player/OpenDoor[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -425,3 +464,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathCounterHud: {fileID: 0}
   checkpointController: {fileID: 0}
+  SOdeathcounter: {fileID: 0}
+  deathCounterALLHud: {fileID: 0}
+--- !u!114 &735748229195135209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844600189419247636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab7ad2bac2fd8444af5157e64d10d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathCounterHud: {fileID: 0}
+  checkpointController: {fileID: 0}
+  SOdeathcounter: {fileID: 11400000, guid: d94d8b5f4d18034449532b5d942cda02, type: 2}
+  deathCounterALLHud: {fileID: 0}
+--- !u!114 &28335843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844600189419247636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b32d5ea9aabbd4aa86c04e13bc50cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsPickUpsInt: 0
+  pickUpText: {fileID: 0}
+  pickUpItem: {fileID: 0}
+  itemsPickedUpHUD: {fileID: 0}
+--- !u!114 &28335850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844600189419247636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e49ee58f599d29a4a88262fddc119ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsPickedUp: {fileID: 28335843}
+  putOffText: {fileID: 0}
+  putOffItem: {fileID: 0}
+  itemsPickedUpHUD: {fileID: 0}
