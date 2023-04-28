@@ -170,12 +170,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpText: {fileID: 56094983}
-  pickUpItem: {fileID: 281405949}
   itemsPickedUpHUD: {fileID: 1036917953}
   maxDistance: 200
   camera: {fileID: 891458466}
   putOffText: {fileID: 1985174203}
-  putOffItem: {fileID: 1706105817}
 --- !u!1 &56094983
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +322,6 @@ GameObject:
   - component: {fileID: 281405953}
   - component: {fileID: 281405951}
   - component: {fileID: 281405956}
-  - component: {fileID: 281405957}
   m_Layer: 0
   m_Name: PickUp
   m_TagString: PickUp
@@ -423,18 +420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropZoneInteractionType: 0
---- !u!114 &281405957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 281405949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b53c17da8fbe2844a8cbb6d88193c77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &330086179
 GameObject:
   m_ObjectHideFlags: 0
