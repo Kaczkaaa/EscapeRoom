@@ -14,42 +14,60 @@ public class PlayerInterraction : MonoBehaviour
     public TextMeshProUGUI itemsPickedUpHUD;
     [SerializeField] private float maxDistance = 50;
     private bool isInRayCast;
-     
     [SerializeField] private Transform camera;
-    private DropZoneInteractionType lastinteracTypeRayCasted;
-    
-    
+    private InteractionType lastinteracTypeRayCasted;
     public GameObject putOffText;
-
     private IPlayerInteraction lastRaycastedInteraction;
+    public GameObject doorText;
+
+    int itemsPlacedAlready;
+
+   [SerializeField] int itemsNeededtoPlace = 3;
     // Start is called before the first frame update
     void Start()
     {
         pickUpText.SetActive(false);
         isInRayCast = false;
         putOffText.SetActive(false);
+        doorText.SetActive(false);
     }
     void Update()
     {
         RayCastCheck();
+        Debug.Log(itemsPlacedAlready);
     }
 
     public void OnPickUp(InputAction.CallbackContext context)
     {
         if (isInRayCast  && context.started)
         {
-            lastRaycastedInteraction?.OnInteraction();
+            
             switch (lastinteracTypeRayCasted)
             {
-                case DropZoneInteractionType.PutOn:
+                case InteractionType.PickUp:
                     PickUp();
+                    lastRaycastedInteraction?.OnInteraction();
                     break;
-                case DropZoneInteractionType.PutOff:
+                case InteractionType.PutOff:
                     if (itemsPickedUp > 0)
                     {
                         PutOff();
+                        itemsPlacedAlready++;
+                        lastRaycastedInteraction?.OnInteraction();
                     }
                     break;
+                case InteractionType.OpenDoor:
+                    lastRaycastedInteraction?.OnInteraction();
+                    doorText.SetActive(false);
+                    break;
+                case InteractionType.OpenClosedDoor:
+                    if (itemsPlacedAlready == itemsNeededtoPlace)
+                    {
+                        doorText.SetActive(false);
+                        lastRaycastedInteraction?.OnInteraction();
+                    }
+                    break;
+                
             }
         }
     }
@@ -73,27 +91,34 @@ public class PlayerInterraction : MonoBehaviour
         
         if(Physics.Raycast(camera.position,camera.forward, out hit,maxDistance))
         {
-            var selection = hit.transform.GetComponent<DropZone>();
+            var selection = hit.transform.GetComponent<Interactions>();
 
             if (selection == null)
             {
                 isInRayCast = false;
                 pickUpText.SetActive(false);
                 putOffText.SetActive(false);
+                doorText.SetActive(false);
                 return;
             }
             
             isInRayCast = true;
             
-            lastinteracTypeRayCasted = selection.dropZoneInteractionType;
+            lastinteracTypeRayCasted = selection.interactionType;
             lastRaycastedInteraction = hit.transform.GetComponent<IPlayerInteraction>();
-            switch (selection.dropZoneInteractionType)
+            switch (selection.interactionType)
             {
-                case DropZoneInteractionType.PutOn:
+                case InteractionType.PickUp:
                     pickUpText.SetActive(true);
                     break;
-                case DropZoneInteractionType.PutOff:
+                case InteractionType.PutOff:
                     putOffText.SetActive(true);
+                    break;
+                case InteractionType.OpenDoor:
+                    doorText.SetActive(true);
+                    break;
+                case InteractionType.OpenClosedDoor:
+                    doorText.SetActive(true);
                     break;
                 default:
                     break;
