@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 move, look;
     private float lookRotation;
     public bool grounded;
+    public ScriptableObjectBool isOnPause;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnLook(InputAction.CallbackContext context)
     {
+        if(isOnPause.value == false)
         look = context.ReadValue<Vector2>();
     }
 
@@ -82,6 +84,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update() 
     {
+        
        Look();
     }
     public void SetGrounded(bool state) 

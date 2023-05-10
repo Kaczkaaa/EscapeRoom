@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 public class ShootingTrap : MonoBehaviour
 {
@@ -13,22 +15,40 @@ public class ShootingTrap : MonoBehaviour
     public Transform bulletSpawnPoint;
 
     public float bulletSpeed;
-    
-    void Update()
+
+    private IEnumerator coroutine1;
+
+    private void Start()
     {
-        ShootBullet();
+        coroutine1 = Shooting();
+        StartCoroutine(coroutine1);
     }
+    
 
-    void ShootBullet()
+    IEnumerator Shooting()
     {
-        bulletTime -= Time.deltaTime;
-        
-        if(bulletTime > 0 ) return;
+        while (true)
+        {
+            yield return new WaitForSeconds(timer);
+            GameObject bulletObj = Instantiate(enemyBullet, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation) as GameObject;
+            Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
+            bulletRig.AddForce(bulletRig.transform.forward * bulletSpeed);
+            yield return null;
+        }
 
-        bulletTime = timer;
-        
-        GameObject bulletObj = Instantiate(enemyBullet, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation) as GameObject;
-        Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
-        bulletRig.AddForce(bulletRig.transform.forward * bulletSpeed);
     }
 }
+
+
+/* void ShootBullet()
+     {
+         bulletTime -= Time.deltaTime;
+         
+         if(bulletTime > 0 ) return;
+ 
+         bulletTime = timer;
+         
+         GameObject bulletObj = Instantiate(enemyBullet, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation) as GameObject;
+         Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
+         bulletRig.AddForce(bulletRig.transform.forward * bulletSpeed);
+     }*/

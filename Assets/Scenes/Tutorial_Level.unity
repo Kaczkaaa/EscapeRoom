@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12076032, g: 0.18643649, b: 0.3352496, a: 1}
+  m_IndirectSpecularColor: {r: 0.12076026, g: 0.18643647, b: 0.33524987, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26406,6 +26406,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3110421095201211653, guid: acee656e07b963c4bb04ed115e908752,
+        type: 3}
+      propertyPath: isOnPause
+      value: 
+      objectReference: {fileID: 11400000, guid: 814441fa25f39694b89f42e1119859d3,
+        type: 2}
     - target: {fileID: 3110421095201211771, guid: acee656e07b963c4bb04ed115e908752,
         type: 3}
       propertyPath: m_IsActive
@@ -44761,6 +44767,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_LoadMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 4475650992824572825, guid: 91bce34802eab5448862e7e998ffa1c3,
+        type: 3}
+      propertyPath: isGamePause
+      value: 
+      objectReference: {fileID: 11400000, guid: 814441fa25f39694b89f42e1119859d3,
+        type: 2}
     - target: {fileID: 4475650992824572830, guid: 91bce34802eab5448862e7e998ffa1c3,
         type: 3}
       propertyPath: m_Pivot.x
