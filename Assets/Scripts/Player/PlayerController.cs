@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float lookRotation;
     public bool grounded;
     public ScriptableObjectBool isOnPause;
+    float rotationY;
 
     public void OnMove(InputAction.CallbackContext context)
     {
