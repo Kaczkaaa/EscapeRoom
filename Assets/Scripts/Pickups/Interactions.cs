@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
@@ -11,6 +12,8 @@ public class Interactions : MonoBehaviour,IPlayerInteraction
     Animator animator;
     [FormerlySerializedAs("dropZoneInteractionType")]
     public InteractionType interactionType;
+
+    private float timer = 2f;
 
     public void OnInteraction()
     {
@@ -27,6 +30,8 @@ public class Interactions : MonoBehaviour,IPlayerInteraction
             case InteractionType.OpenDoor:
                 animator = GetComponent<Animator>();
                 ToggleDoor();
+                gameObject.GetComponent<Collider>().enabled = false;
+                StartCoroutine(DoorOpen());
                 break;
             case InteractionType.OpenClosedDoor:
                 gameObject.SetActive(false);
@@ -50,5 +55,11 @@ public class Interactions : MonoBehaviour,IPlayerInteraction
             OpenDoor();
         else
             CloseDoor();
+    }
+
+    private IEnumerator DoorOpen()
+    {
+            yield return new WaitForSeconds(timer);
+            gameObject.GetComponent<Collider>().enabled = true;
     }
 }

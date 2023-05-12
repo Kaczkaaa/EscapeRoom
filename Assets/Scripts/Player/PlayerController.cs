@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private float lookRotation;
     public bool grounded;
     public ScriptableObjectBool isOnPause;
+    private float velocity = 0;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -22,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public void OnLook(InputAction.CallbackContext context)
     {
         if(isOnPause.value == false)
-        look = context.ReadValue<Vector2>();
+            look = context.ReadValue<Vector2>();
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -84,8 +85,8 @@ public class PlayerController : MonoBehaviour
     }
     void Update() 
     {
-        
-       Look();
+        if(isOnPause.value == false)
+            Look();
     }
     public void SetGrounded(bool state) 
     {

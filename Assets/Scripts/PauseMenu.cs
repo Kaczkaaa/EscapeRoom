@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     public static bool gameIsPaused = false; //zmienna do sprawdzania czy gra jest zastopowana
     public GameObject pauseMenuUi; //potrzebujemy referencji do gameobjectu na scenie
     public ScriptableObjectBool isGamePause;
+    private float velocity;
     
 
     void Awake()

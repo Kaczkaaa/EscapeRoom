@@ -15,19 +15,23 @@ public class ShootingTrap : MonoBehaviour
     public Transform bulletSpawnPoint;
 
     public float bulletSpeed;
-
-    private IEnumerator coroutine1;
+    
+    private bool isInTrigger;
 
     private void Start()
     {
-        coroutine1 = Shooting();
-        StartCoroutine(coroutine1);
+        isInTrigger = false;
     }
-    
+
+    private void Update()
+    {
+    }
+
 
     IEnumerator Shooting()
     {
-        while (true)
+        Debug.Log("Idk");
+        while (isInTrigger)
         {
             yield return new WaitForSeconds(timer);
             GameObject bulletObj = Instantiate(enemyBullet, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation) as GameObject;
@@ -35,7 +39,25 @@ public class ShootingTrap : MonoBehaviour
             bulletRig.AddForce(bulletRig.transform.forward * bulletSpeed);
             yield return null;
         }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            isInTrigger = true;
+            StartCoroutine(Shooting());
+            Debug.Log(isInTrigger);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            isInTrigger = false;
+            StopCoroutine(Shooting());
+        }
     }
 }
 
