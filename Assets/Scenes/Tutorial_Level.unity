@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.120751046, g: 0.18641728, b: 0.3351589, a: 1}
+  m_IndirectSpecularColor: {r: 0.12076026, g: 0.18643647, b: 0.33524987, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9511,6 +9511,7 @@ GameObject:
   - component: {fileID: 393897713}
   - component: {fileID: 393897715}
   - component: {fileID: 393897714}
+  - component: {fileID: 393897716}
   m_Layer: 0
   m_Name: rockform.corner.soft.dark (2)
   m_TagString: Untagged
@@ -9582,6 +9583,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393897712}
+  m_Mesh: {fileID: 4277380197942258048, guid: 377acb395d272d44484be049ca3e640b, type: 3}
+--- !u!64 &393897716
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393897712}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4277380197942258048, guid: 377acb395d272d44484be049ca3e640b, type: 3}
 --- !u!1 &397169297
 GameObject:
@@ -19412,6 +19427,7 @@ GameObject:
   - component: {fileID: 919920670}
   - component: {fileID: 919920672}
   - component: {fileID: 919920671}
+  - component: {fileID: 919920673}
   m_Layer: 0
   m_Name: rockform.corner.soft.dark (1)
   m_TagString: Untagged
@@ -19483,6 +19499,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919920669}
+  m_Mesh: {fileID: 4277380197942258048, guid: 377acb395d272d44484be049ca3e640b, type: 3}
+--- !u!64 &919920673
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919920669}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4277380197942258048, guid: 377acb395d272d44484be049ca3e640b, type: 3}
 --- !u!1 &922353367
 GameObject:
@@ -23909,6 +23939,7 @@ GameObject:
   - component: {fileID: 1109056505}
   - component: {fileID: 1109056508}
   - component: {fileID: 1109056507}
+  - component: {fileID: 1109056509}
   m_Layer: 0
   m_Name: rockform.corner.soft.medium (1)
   m_TagString: Untagged
@@ -24007,6 +24038,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 30.363943, y: 15.369703, z: 17.100252}
   m_Center: {x: -2.3933437, y: 7.6581454, z: 9.273707}
+--- !u!65 &1109056509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109056503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.498024, y: 15.3697, z: 16.916454}
+  m_Center: {x: -2.326481, y: 7.6581473, z: 9.365546}
 --- !u!1 &1109067054
 GameObject:
   m_ObjectHideFlags: 0
@@ -28321,6 +28365,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 401507925}
+    - target: {fileID: 3110421095201211650, guid: acee656e07b963c4bb04ed115e908752,
+        type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110421095201211650, guid: acee656e07b963c4bb04ed115e908752,
+        type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3110421095201211652, guid: acee656e07b963c4bb04ed115e908752,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44555,6 +44609,7 @@ GameObject:
   - component: {fileID: 8370730532071567994}
   - component: {fileID: 5514157604922461188}
   - component: {fileID: 3658282929760848356}
+  - component: {fileID: 8370730532071567996}
   - component: {fileID: 8370730532071567995}
   m_Layer: 0
   m_Name: rockform.corner.hard.medium
@@ -48722,6 +48777,7 @@ GameObject:
   - component: {fileID: 8967279845460691675}
   - component: {fileID: 7101314358295041263}
   - component: {fileID: 906028640534136627}
+  - component: {fileID: 8967279845460691676}
   m_Layer: 0
   m_Name: rockform.wall.long.dark
   m_TagString: Untagged
@@ -50812,8 +50868,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.822698, y: 31.304428, z: 17.919998}
-  m_Center: {x: -10.88853, y: -4.8999968, z: 4.8998733}
+  m_Size: {x: 9.550814, y: 31.304428, z: 17.919998}
+  m_Center: {x: -11.024466, y: -4.8999968, z: 4.8998656}
 --- !u!65 &7992741306493762283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51044,8 +51100,8 @@ Transform:
   m_Father: {fileID: 9015296795966569189}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 85.834}
---- !u!64 &8370730532071567995
-MeshCollider:
+--- !u!65 &8370730532071567995
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -51054,10 +51110,22 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1249751092232847481, guid: 377acb395d272d44484be049ca3e640b, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 30.339128, y: 11.46559, z: 15.393463}
+  m_Center: {x: -2.4057577, y: -12.091043, z: 7.646274}
+--- !u!65 &8370730532071567996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405526645907004239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.339128, y: 31.30443, z: 15.393461}
+  m_Center: {x: -2.4057572, y: -2.1715674, z: 7.6462746}
 --- !u!23 &8444821123075196802
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -51452,6 +51520,19 @@ Transform:
   m_Father: {fileID: 9015296795966569189}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8967279845460691676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4947472948026014521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 42.26195, y: 11.801679, z: 15.352465}
+  m_Center: {x: -0.073562615, y: -0.0181632, z: 7.6667624}
 --- !u!4 &9012066978150407420
 Transform:
   m_ObjectHideFlags: 0
