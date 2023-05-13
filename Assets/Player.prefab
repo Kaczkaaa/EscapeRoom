@@ -113,8 +113,8 @@ Rigidbody:
   m_GameObject: {fileID: 3110421095201211771}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 0.1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
   maxForce: 1
   jumpForce: 5
   grounded: 0
+  isOnPause: {fileID: 0}
 --- !u!114 &3110421095201211650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +320,8 @@ MonoBehaviour:
   maxDistance: 200
   camera: {fileID: 3110421095759395312}
   putOffText: {fileID: 0}
+  doorText: {fileID: 0}
+  itemsNeededtoPlace: 3
 --- !u!1 &3110421095759395317
 GameObject:
   m_ObjectHideFlags: 0

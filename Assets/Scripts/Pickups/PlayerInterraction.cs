@@ -66,7 +66,6 @@ public class PlayerInterraction : MonoBehaviour
                         lastRaycastedInteraction?.OnInteraction();
                     }
                     break;
-                
             }
         }
     }
