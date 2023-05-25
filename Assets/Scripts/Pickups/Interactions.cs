@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
-public class Interactions : MonoBehaviour,IPlayerInteraction
+public class Interactions : MonoBehaviour
 {
     bool isOpen = false;
     Animator animator;
@@ -15,24 +15,10 @@ public class Interactions : MonoBehaviour,IPlayerInteraction
 
     private float timer = 2f;
 
-    public void OnInteraction()
+    public void OnInteraction(GameObject sender)
     {
         switch (interactionType)
         {
-            case InteractionType.PickUp:
-                gameObject.GetComponent<MeshRenderer>().enabled = false;
-                gameObject.GetComponent<BoxCollider>().enabled = false;
-                break;
-            case InteractionType.PutOff:
-                gameObject.GetComponent<BoxCollider>().enabled = false;
-                gameObject.GetComponent<MeshRenderer>().enabled = true;
-                break;
-            case InteractionType.OpenDoor:
-                animator = GetComponent<Animator>();
-                ToggleDoor();
-                gameObject.GetComponent<Collider>().enabled = false;
-                StartCoroutine(DoorOpen());
-                break;
             case InteractionType.OpenClosedDoor:
                 gameObject.SetActive(false);
                 break;
@@ -62,4 +48,6 @@ public class Interactions : MonoBehaviour,IPlayerInteraction
             yield return new WaitForSeconds(timer);
             gameObject.GetComponent<Collider>().enabled = true;
     }
+
+    public InteractionType GetInteractionType() => interactionType;
 }
