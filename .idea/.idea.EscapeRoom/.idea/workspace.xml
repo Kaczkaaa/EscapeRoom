@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3febb1-74d0-49c6-8eb9-f34a23163a96" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Controls/Player.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controls/Player.physicMaterial" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelArt/Fonts/Square-Black SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelArt/Fonts/Square-Black SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prefabs/LevelKuba.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prefabs/LevelKuba.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EscapeRoom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EscapeRoom/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DoorOpenInteractionController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DoorOpenInteractionController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemsPickedUpSO.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemsPickedUpSO.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemsPlacedAlreadySO.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemsPlacedAlreadySO.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OpenClosedDoorInteraction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OpenClosedDoorInteraction.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PickUpInteractionController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PickUpInteractionController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PutOffInteractionController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PutOffInteractionController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sandbox_Antek.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sandbox_Antek.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/IPlayerinterraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickups/IPlayerinterraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/PlayerInterraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickups/PlayerInterraction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +40,6 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.3.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -39,23 +49,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\pawli\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\pawli\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\pawli\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Antek\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Unity.exe" />
@@ -139,6 +149,12 @@
       <workItem from="1684269352403" duration="3000" />
       <workItem from="1684270033299" duration="596000" />
       <workItem from="1684500426622" duration="14000" />
+      <workItem from="1685027661313" duration="1401000" />
+      <workItem from="1685035284790" duration="1467000" />
+      <workItem from="1685114449688" duration="1266000" />
+      <workItem from="1685533233677" duration="6310000" />
+      <workItem from="1685547955005" duration="183000" />
+      <workItem from="1685549592540" duration="23000" />
     </task>
     <servers />
   </component>

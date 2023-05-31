@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,8 +9,19 @@ public class PickUpInteractionController : MonoBehaviour, IPlayerInteraction
     public InteractionType interactionType = InteractionType.PickUp;
     public TextMeshProUGUI pickUpText;
     public TextMeshProUGUI textObject => pickUpText;
+    public string textUI = "Use E to pick up";
 
     public InteractionType GetInteractionType() => interactionType;
+    public void HandleUi()
+    {
+        textObject.text = textUI;
+        textObject.gameObject.SetActive(true);
+    }
+
+    private void Start()
+    {
+        textObject.gameObject.SetActive(false);
+    }
 
     public void OnInteraction(GameObject sender)
     {
@@ -24,4 +36,5 @@ public class PickUpInteractionController : MonoBehaviour, IPlayerInteraction
 
         }
     }
+    
 }

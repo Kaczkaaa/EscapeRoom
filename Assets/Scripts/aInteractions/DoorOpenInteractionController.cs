@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,10 +13,22 @@ public class DoorOpenInteractionController : MonoBehaviour, IPlayerInteraction
     private float timer = 2f;
     public TextMeshProUGUI text;
     public TextMeshProUGUI textObject => text;
+    public string textUI = "Use E to open door";
+
+    private void Start()
+    {
+        textObject.gameObject.SetActive(false);
+    }
 
     public InteractionType GetInteractionType()
     {
         return interactionType;
+    }
+
+    public void HandleUi()
+    {
+        textObject.text = textUI;
+        textObject.gameObject.SetActive(true);
     }
 
     public void OnInteraction(GameObject sender)

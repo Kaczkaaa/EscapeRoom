@@ -8,7 +8,7 @@ using UnityEngine;
     public TextMeshProUGUI textObject { get; }
     public void OnInteraction(GameObject sender);
     public InteractionType GetInteractionType();
-    public void HandleUi() { }
+    public void HandleUi();
 }
 
   

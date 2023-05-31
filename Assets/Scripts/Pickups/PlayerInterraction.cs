@@ -15,13 +15,12 @@ public class PlayerInterraction : MonoBehaviour
     [SerializeField] private Transform camera;
     private IPlayerInteraction lastRaycastedInteraction;
     [SerializeField] ScriptableObjectINT itemsPickedUp;
-
-    [SerializeField] int itemsNeededtoPlace = 3;
+    [SerializeField] ScriptableObjectINT itemsPlacedAlready;
     // Start is called before the first frame update
     void Start()
     {
         isInRayCast = false;
-
+        itemsPickedUp.value = 0;
     }
     void Update()
     {
@@ -45,6 +44,7 @@ public class PlayerInterraction : MonoBehaviour
     {
         itemsPickedUp.value --;
         itemsPickedUpHUD.text = itemsPickedUp.value.ToString();
+        itemsPlacedAlready.value++;
     }
     void RayCastCheck()
     {
@@ -54,10 +54,12 @@ public class PlayerInterraction : MonoBehaviour
         
         if(Physics.Raycast(camera.position,camera.forward, out hit,maxDistance))
         {
+            
             if(lastRaycastedInteraction != null)
             {
                 lastRaycastedInteraction.textObject?.gameObject.SetActive(false);
             }
+            
             lastRaycastedInteraction = hit.transform.GetComponent<IPlayerInteraction>();
 
             if (lastRaycastedInteraction == null)
@@ -65,9 +67,18 @@ public class PlayerInterraction : MonoBehaviour
                 isInRayCast = false;
                 return;
             }
+
             
             isInRayCast = true;
-            lastRaycastedInteraction.textObject?.gameObject.SetActive(true);
+            IPlayerInteraction ui = hit.transform.GetComponent<IPlayerInteraction>();
+            ui.HandleUi();
+        }
+        else
+        {
+            if(lastRaycastedInteraction != null)
+            {
+                lastRaycastedInteraction.textObject?.gameObject.SetActive(false);
+            }
         }
     }
 }

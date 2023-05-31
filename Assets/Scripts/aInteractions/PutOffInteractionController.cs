@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,8 +9,19 @@ public class PutOffInteractionController : MonoBehaviour, IPlayerInteraction
     public TextMeshProUGUI text;
     public TextMeshProUGUI textObject => text;
     public InteractionType GetInteractionType() => InteractionType.OpenClosedDoor;
-   
+    public string textUI = "Use E to put off";
+    public void HandleUi()
+    {
+        textObject.text = textUI;
+        textObject.gameObject.SetActive(true);
+    }
+
     [SerializeField] ScriptableObjectINT itemsPickedUp;
+
+    private void Start()
+    {
+        textObject.gameObject.SetActive(false);
+    }
 
     public void OnInteraction(GameObject sender)
     {
