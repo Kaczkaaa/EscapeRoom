@@ -36981,7 +36981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860054623797914351}
   m_Layer: 0
-  m_Name: LevelKuba
+  m_Name: Level1_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
