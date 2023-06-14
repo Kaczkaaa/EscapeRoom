@@ -4077,7 +4077,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223688258}
   m_Mesh: {fileID: 6902037500164898893, guid: 377acb395d272d44484be049ca3e640b, type: 3}
---- !u!1 &229293700
+--- !u!1 &255118784
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4085,19 +4085,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 229293701}
-  - component: {fileID: 229293705}
-  - component: {fileID: 229293704}
-  - component: {fileID: 229293703}
-  - component: {fileID: 229293702}
+  - component: {fileID: 255118786}
+  - component: {fileID: 255118785}
   m_Layer: 0
-  m_Name: rockform.wall.long.medium (3)
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &229293701
+--- !u!114 &255118785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255118784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: c18acb873e979ad4ca7ab8dc6e732a09, type: 2}
+--- !u!4 &255118786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255118784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1676735669 stripped
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34299,7 +34328,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3147764520202243259, guid: 69d31856397c00f47bb68d408e46bc29,
+    - target: {fileID: 6706746263133232949, guid: 525b17e110c69467bbae579c05d3f3f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706746263366040757, guid: 525b17e110c69467bbae579c05d3f3f0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -0.671
@@ -36673,7 +36707,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 78de95d676c519d42ae191386e4bb2cb,
+    - target: {fileID: 8518921194411557960, guid: 525b17e110c69467bbae579c05d3f3f0,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755376057379608297, guid: 525b17e110c69467bbae579c05d3f3f0,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071067
