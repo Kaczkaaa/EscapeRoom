@@ -145,7 +145,7 @@ Rigidbody:
   m_GameObject: {fileID: 3110421095201211771}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1.8
+  m_Drag: 3
   m_AngularDrag: 0.1
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   speed: 13
   sensitivity: 0.1
   maxForce: 1
-  jumpForce: 5
+  jumpForce: 6
   grounded: 0
   isOnPause: {fileID: 11400000, guid: 814441fa25f39694b89f42e1119859d3, type: 2}
 --- !u!114 &3110421095201211650
@@ -330,11 +330,11 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d33eb7aa-1ba6-4b9a-bb94-936f76bb0d6c
     m_ActionName: Player/HoldObject[/Keyboard/f]
-  m_NeverAutoSwitchControlSchemes: 0
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 3110421095759395315}
 --- !u!114 &5878387748380933096
 MonoBehaviour:
   m_ObjectHideFlags: 0
