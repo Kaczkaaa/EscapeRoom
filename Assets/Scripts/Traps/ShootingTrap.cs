@@ -22,12 +22,7 @@ public class ShootingTrap : MonoBehaviour
     {
         isInTrigger = false;
     }
-
-    private void Update()
-    {
-    }
-
-
+    
     IEnumerator Shooting()
     {
         Debug.Log("Idk");
@@ -60,7 +55,6 @@ public class ShootingTrap : MonoBehaviour
         }
     }
 }
-
 
 /* void ShootBullet()
      {

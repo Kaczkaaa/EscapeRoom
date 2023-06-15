@@ -15,13 +15,7 @@ public class HoldingItems : MonoBehaviour
 
     [SerializeField] Transform holdArea;
     [SerializeField] float pickupForce = 150.0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (heldObj != null)

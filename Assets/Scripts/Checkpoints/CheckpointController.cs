@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
-   public Transform actuallCheckpoint;
+   public Transform actualCheckpoint;
    [SerializeField] GameObject _player;
 
    private void Awake()
@@ -20,13 +20,9 @@ public class CheckpointController : MonoBehaviour
    
    public void Respawn()
    {
-       _player.transform.position = actuallCheckpoint.position;
+       _player.transform.position = actualCheckpoint.position;
    }
    
-
-    
-
-
    /* public GameObject checkpoint;
     public GameObject checkpoint2;
     public GameObject checkpoint3;

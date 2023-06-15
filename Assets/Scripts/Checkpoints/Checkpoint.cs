@@ -12,7 +12,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.gameObject.layer == 3)
         {
-            checkpointController.actuallCheckpoint = gameObject.transform;
+            checkpointController.actualCheckpoint = gameObject.transform;
             if (collider != null)
             {
                 collider.enabled = false;
