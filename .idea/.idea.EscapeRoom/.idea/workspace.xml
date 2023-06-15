@@ -3,28 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="ac3febb1-74d0-49c6-8eb9-f34a23163a96" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EscapeRoom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EscapeRoom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimatedDoor/CloseDoor.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimatedDoor/CloseDoor.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimatedDoor/Door_Animated.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimatedDoor/Door_Animated.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimatedDoor/OpenDoor.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimatedDoor/OpenDoor.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelArt/Low Poly Environment Starter Kit/Source/Material/URP/Water Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelArt/Low Poly Environment Starter Kit/Source/Material/URP/Water Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Doors/Door_Animated Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Doors/Door_Animated Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Doors/Door_SetActive.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Doors/Door_SetActive.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PickUp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PickUp.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PutOff.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PutOff.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PutOff.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PutOff.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ShootingTrap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ShootingTrap.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sandbox_Antek.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sandbox_Antek.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelArt/Materials/New Material 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelArt/Materials/New Material 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelArt/Box_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelArt/Box_02.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainUI.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainUI.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ShootingTrap.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ShootingTrap.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Second_Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Second_Level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial_Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial_Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Checkpoints/Checkpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Checkpoints/Checkpoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Checkpoints/CheckpointController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Checkpoints/CheckpointController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Doors/Triggers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player holding system/HoldingItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player holding system/HoldingItems.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Traps/ShootingTrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Traps/ShootingTrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/TranslucentCrystals_HDRP_Patch.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/TranslucentCrystals_URP_Patch.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -45,6 +35,10 @@
         <option name="url" value="https://github.com/Kaczkaaa/EscapeRoom.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/ThrowSound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player holding system/UIThrowable.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -162,7 +156,8 @@
       <workItem from="1685547955005" duration="183000" />
       <workItem from="1685549592540" duration="23000" />
       <workItem from="1686830971595" duration="675000" />
-      <workItem from="1686837104421" duration="708000" />
+      <workItem from="1686837104421" duration="3143000" />
+      <workItem from="1686850391672" duration="968000" />
     </task>
     <servers />
   </component>

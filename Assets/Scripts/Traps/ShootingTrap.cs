@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 
 public class ShootingTrap : MonoBehaviour
@@ -18,6 +19,13 @@ public class ShootingTrap : MonoBehaviour
     
     private bool isInTrigger;
 
+    private AudioSource shootSound;
+
+    private void Awake()
+    {
+        shootSound = GetComponent<AudioSource>();
+    }
+
     private void Start()
     {
         isInTrigger = false;
@@ -32,6 +40,7 @@ public class ShootingTrap : MonoBehaviour
             GameObject bulletObj = Instantiate(enemyBullet, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation) as GameObject;
             Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
             bulletRig.AddForce(bulletRig.transform.forward * bulletSpeed);
+            shootSound.Play();
             yield return null;
         }
     }

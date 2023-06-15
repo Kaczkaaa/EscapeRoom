@@ -8,6 +8,7 @@ TagManager:
   - DestroyBullet
   - PickUp
   - PutOff
+  - Throwable
   layers:
   - Default
   - TransparentFX
