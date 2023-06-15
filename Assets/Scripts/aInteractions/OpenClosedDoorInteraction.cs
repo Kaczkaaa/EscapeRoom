@@ -10,6 +10,8 @@ public class OpenClosedDoorInteraction : MonoBehaviour, IPlayerInteraction
     public TextMeshProUGUI textObject => text;
     public string textUI = "Click E to open door";
     AudioSource audioExitDoors;
+    [SerializeField] private GameObject soundD;
+    private AudioSource audio;
 
     public InteractionType GetInteractionType() => InteractionType.OpenClosedDoor;
     public void HandleUi()
@@ -24,6 +26,7 @@ public class OpenClosedDoorInteraction : MonoBehaviour, IPlayerInteraction
     private void Awake()
     {
         audioExitDoors = GetComponent<AudioSource>();
+        audio = soundD.GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -36,7 +39,7 @@ public class OpenClosedDoorInteraction : MonoBehaviour, IPlayerInteraction
     {
         if (itemsPlacedAlready.value == itemsNeededToPlace)
         {
-            audioExitDoors.Play();
+            audio.Play();
             textObject.gameObject.SetActive(false);
             gameObject.SetActive(false);
         }

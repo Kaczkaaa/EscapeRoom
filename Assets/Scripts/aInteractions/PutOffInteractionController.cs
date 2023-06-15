@@ -11,12 +11,18 @@ public class PutOffInteractionController : MonoBehaviour, IPlayerInteraction
     public InteractionType GetInteractionType() => InteractionType.OpenClosedDoor;
     public string textUI = "Use E to put off";
     [SerializeField] ScriptableObjectINT itemsPickedUp;
+    
+    private AudioSource audioPlace;
     public void HandleUi()
     {
         textObject.text = textUI;
         textObject.gameObject.SetActive(true);
     }
-
+    
+    private void Awake()
+    {
+        audioPlace = GetComponent<AudioSource>();
+    }
     private void Start()
     {
         textObject.gameObject.SetActive(false);
@@ -30,8 +36,10 @@ public class PutOffInteractionController : MonoBehaviour, IPlayerInteraction
          {
              gameObject.GetComponent<BoxCollider>().enabled = false;
              gameObject.GetComponent<MeshRenderer>().enabled = true;
+             audioPlace.Play();
              if (playerInterraction != null)
                  playerInterraction.PutOff();
+             
          }
         textObject.gameObject.SetActive(false);
     }
