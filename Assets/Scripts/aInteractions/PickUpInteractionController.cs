@@ -10,12 +10,18 @@ public class PickUpInteractionController : MonoBehaviour, IPlayerInteraction
     public TextMeshProUGUI pickUpText;
     public TextMeshProUGUI textObject => pickUpText;
     public string textUI = "Use E to pick up";
+    private AudioSource audioPickup;
 
     public InteractionType GetInteractionType() => interactionType;
     public void HandleUi()
     {
         textObject.text = textUI;
         textObject.gameObject.SetActive(true);
+    }
+
+    private void Awake()
+    {
+        audioPickup = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -31,10 +37,9 @@ public class PickUpInteractionController : MonoBehaviour, IPlayerInteraction
         PlayerInterraction playerInterraction = sender.GetComponent<PlayerInterraction>();
         if(playerInterraction != null)
         {
+            audioPickup.Play();
             playerInterraction.PickUp();
             textObject.gameObject.SetActive(false);
-
         }
     }
-    
 }

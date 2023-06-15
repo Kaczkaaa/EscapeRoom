@@ -28,13 +28,12 @@ public class PutOffInteractionController : MonoBehaviour, IPlayerInteraction
         PlayerInterraction playerInterraction = sender.GetComponent<PlayerInterraction>();
         gameObject.GetComponent<BoxCollider>().enabled = false;
         gameObject.GetComponent<MeshRenderer>().enabled = true;
-         if (itemsPickedUp.value > 0)
+         if (itemsPickedUp.value > 1)
          {
              if (playerInterraction != null)
                  playerInterraction.PutOff();
          }
         textObject.gameObject.SetActive(false);
-
     }
 
 }
