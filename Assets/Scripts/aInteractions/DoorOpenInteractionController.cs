@@ -14,10 +14,12 @@ public class DoorOpenInteractionController : MonoBehaviour, IPlayerInteraction
     public TextMeshProUGUI text;
     public TextMeshProUGUI textObject => text;
     public string textUI = "Use E to open door";
+    AudioSource audioDoors;
 
-    private void Start()
+    private void Awake()
     {
         textObject.gameObject.SetActive(false);
+        audioDoors = GetComponent<AudioSource>();
     }
 
     public InteractionType GetInteractionType()
@@ -52,6 +54,7 @@ public class DoorOpenInteractionController : MonoBehaviour, IPlayerInteraction
     }
     void ToggleDoor()
     {
+        audioDoors.Play();
         isOpen = !isOpen;
         if (isOpen)
             OpenDoor();
