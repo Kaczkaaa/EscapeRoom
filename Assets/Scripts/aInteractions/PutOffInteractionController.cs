@@ -10,13 +10,12 @@ public class PutOffInteractionController : MonoBehaviour, IPlayerInteraction
     public TextMeshProUGUI textObject => text;
     public InteractionType GetInteractionType() => InteractionType.OpenClosedDoor;
     public string textUI = "Use E to put off";
+    [SerializeField] ScriptableObjectINT itemsPickedUp;
     public void HandleUi()
     {
         textObject.text = textUI;
         textObject.gameObject.SetActive(true);
     }
-
-    [SerializeField] ScriptableObjectINT itemsPickedUp;
 
     private void Start()
     {
@@ -26,10 +25,11 @@ public class PutOffInteractionController : MonoBehaviour, IPlayerInteraction
     public void OnInteraction(GameObject sender)
     {
         PlayerInterraction playerInterraction = sender.GetComponent<PlayerInterraction>();
-        gameObject.GetComponent<BoxCollider>().enabled = false;
-        gameObject.GetComponent<MeshRenderer>().enabled = true;
-         if (itemsPickedUp.value > 1)
+        
+         if (itemsPickedUp.value > 0)
          {
+             gameObject.GetComponent<BoxCollider>().enabled = false;
+             gameObject.GetComponent<MeshRenderer>().enabled = true;
              if (playerInterraction != null)
                  playerInterraction.PutOff();
          }

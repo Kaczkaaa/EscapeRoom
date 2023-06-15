@@ -9854,6 +9854,12 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 421961025}
+    - target: {fileID: 257150583483866238, guid: fb4218f41775ba44d9ddb1964c5e89f9,
+        type: 3}
+      propertyPath: itemsPickedUp
+      value: 
+      objectReference: {fileID: 11400000, guid: b3a4821291f1ce64fa90c8e7dab9d6fb,
+        type: 2}
     - target: {fileID: 7657664916106146002, guid: fb4218f41775ba44d9ddb1964c5e89f9,
         type: 3}
       propertyPath: m_Enabled
@@ -10617,6 +10623,12 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 421961025}
+    - target: {fileID: 257150583483866238, guid: fb4218f41775ba44d9ddb1964c5e89f9,
+        type: 3}
+      propertyPath: itemsPickedUp
+      value: 
+      objectReference: {fileID: 11400000, guid: b3a4821291f1ce64fa90c8e7dab9d6fb,
+        type: 2}
     - target: {fileID: 7657664916106146002, guid: fb4218f41775ba44d9ddb1964c5e89f9,
         type: 3}
       propertyPath: m_Enabled
@@ -53560,6 +53572,12 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 421961025}
+    - target: {fileID: 257150583483866238, guid: fb4218f41775ba44d9ddb1964c5e89f9,
+        type: 3}
+      propertyPath: itemsPickedUp
+      value: 
+      objectReference: {fileID: 11400000, guid: b3a4821291f1ce64fa90c8e7dab9d6fb,
+        type: 2}
     - target: {fileID: 7657664916106146002, guid: fb4218f41775ba44d9ddb1964c5e89f9,
         type: 3}
       propertyPath: m_Enabled
@@ -74912,6 +74930,12 @@ PrefabInstance:
       propertyPath: checkpointController
       value: 
       objectReference: {fileID: 8350450570488503572}
+    - target: {fileID: 788807910144999350, guid: b9416016170b7cc48a5b33a71253a4e5,
+        type: 3}
+      propertyPath: itemsPickedUp
+      value: 
+      objectReference: {fileID: 11400000, guid: b3a4821291f1ce64fa90c8e7dab9d6fb,
+        type: 2}
     - target: {fileID: 788807910144999350, guid: b9416016170b7cc48a5b33a71253a4e5,
         type: 3}
       propertyPath: itemsPickedUpHUD
@@ -103173,6 +103197,12 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 421961025}
+    - target: {fileID: 257150583483866238, guid: fb4218f41775ba44d9ddb1964c5e89f9,
+        type: 3}
+      propertyPath: itemsPickedUp
+      value: 
+      objectReference: {fileID: 11400000, guid: b3a4821291f1ce64fa90c8e7dab9d6fb,
+        type: 2}
     - target: {fileID: 7657664916106146002, guid: fb4218f41775ba44d9ddb1964c5e89f9,
         type: 3}
       propertyPath: m_Enabled

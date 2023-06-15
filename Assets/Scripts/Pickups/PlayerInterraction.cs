@@ -36,12 +36,14 @@ public class PlayerInterraction : MonoBehaviour
     }
     public void PickUp()
     {
+        Debug.Log("PickUp");
         itemsPickedUp.value++;
         itemsPickedUpHUD.text = itemsPickedUp.value.ToString();
     }
 
     public void PutOff()
     {
+        Debug.Log("Putoff");
         itemsPickedUp.value --;
         itemsPickedUpHUD.text = itemsPickedUp.value.ToString();
         itemsPlacedAlready.value++;
