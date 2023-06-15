@@ -20,7 +20,6 @@ public class PauseMenu : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Escape)) //kiedy gracz wciśnie escape
         {
-            Debug.Log("Escape wciśnięty");
             if (gameIsPaused)//oraz gdy gra jest zastopowana
             {
                 Resume(); //użyta zostaje metoda resume
@@ -52,13 +51,11 @@ public class PauseMenu : MonoBehaviour
         }
         public void LoadMenu()//metoda do załączania Menu 
         {
-            Debug.Log("Ładuje się Menu");
             Time.timeScale=1f;
             SceneManager.LoadScene(0); //ładuje się scena z indeksem odpowiadającym liczbie
         }
         public void QuitGame()//metoda do wyłączania gry
         {
-            Debug.Log("Wstaję, wychodzę");
             Application.Quit(); //aplikacja się wyłącza
         }
 

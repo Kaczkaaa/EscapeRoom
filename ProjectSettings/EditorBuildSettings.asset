@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Second_Level.unity
     guid: 0af80af1b8565bd44be5c3f1b367827f
   - enabled: 1
-    path: Assets/Scenes/Sandbox_Antek.unity
-    guid: f752a23831558db41a173b4b69f43c79
+    path: Assets/Scenes/MenuOutro.unity
+    guid: 01479cbda48abd742a360d2722871c4d
   m_configObjects: {}

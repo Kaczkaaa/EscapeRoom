@@ -33,7 +33,6 @@ public class ShootingTrap : MonoBehaviour
     
     IEnumerator Shooting()
     {
-        Debug.Log("Idk");
         while (isInTrigger)
         {
             yield return new WaitForSeconds(timer);
